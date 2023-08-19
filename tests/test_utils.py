@@ -17,5 +17,5 @@ class TestCalculator(unittest.TestCase):
         assert c.dzielenie() == 1.0
 
     def test_dzielenie_bad_test(self):
-        c = Calculator(6, 6)
-        assert c.dzielenie() == 3
+        c = Calculator(6, 0)
+        self.assertRaises(ZeroDivisionError, c.dzielenie)
